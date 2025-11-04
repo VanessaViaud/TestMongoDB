@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: caveavin
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: CAVE_A_VIN
+      auto-index-creation: true
+
+
