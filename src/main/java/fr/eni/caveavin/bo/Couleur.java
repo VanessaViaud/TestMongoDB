@@ -1,12 +1,12 @@
 package fr.eni.caveavin.bo;
 
-import lombok.Data;
+import lombok.*;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Couleur {
 
-    private Integer id;
     private String libelle;
-
 
 }
