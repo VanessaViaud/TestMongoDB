@@ -10,6 +10,9 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 @RequiredArgsConstructor
 @NoArgsConstructor
@@ -35,4 +38,6 @@ public class Bouteille {
     //une collection avec @Document.
     private Region region;
     private Couleur couleur;
+
+    private List<Avis> avis = new ArrayList<>();
 }

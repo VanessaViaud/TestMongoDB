@@ -1,7 +1,9 @@
 package fr.eni.caveavin.dal;
 
 import com.mongodb.DuplicateKeyException;
+import fr.eni.caveavin.bo.Avis;
 import fr.eni.caveavin.bo.Bouteille;
+import fr.eni.caveavin.bo.Couleur;
 import fr.eni.caveavin.bo.Region;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -23,6 +25,11 @@ public class BouteilleRespositoryTest {
         Region champagne = new Region("Champagne");
         bouteille.setRegion(champagne);
 
+        Couleur couleur = new Couleur("rouge");
+        bouteille.setCouleur(couleur);
+        bouteille.getAvis().add(new Avis("avis1"));
+        bouteille.getAvis().add(new Avis("avis2"));
+        bouteille.getAvis().add(new Avis("avis3"));
         Bouteille savedBouteille = bouteilleRepository.save(bouteille);
 
         System.out.println(savedBouteille);
